@@ -1,4 +1,3 @@
-# import sys
 import imp
 
 
@@ -11,17 +10,20 @@ def load(config_file_name):
     :raise: FileNotFoundError if configuration file does not exist
     """
     file = open(config_file_name, 'r')
-    modules = []
-    for name in file.readlines():
-        name = name.rstrip('\n')
-        fp = None
+    try:
+        modules = []
+        for name in file.readlines():
+            name = name.rstrip('\n')
+            fp = None
 
-        try:
-            fp, pathname, description = imp.find_module(name)
-            modules.append(imp.load_module(name, fp, pathname, description))
-        except ImportError:
-            continue
-        finally:
-            if fp:
-                fp.close()
+            try:
+                fp, pathname, description = imp.find_module(name)
+                modules.append(imp.load_module(name, fp, pathname, description))
+            except ImportError:
+                continue
+            finally:
+                if fp:
+                    fp.close()
+    finally:
+        file.close()
     return modules
