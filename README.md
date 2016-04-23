@@ -10,6 +10,7 @@ As it was mentioned before, the application should use plugins to be flexible. T
 ###Read order
 These plugins are used to declare the order of source files concatenation. Only one of existing plugins may be used at the same time (use of more than one order of sources concatenation does not make sense).
 To configure a plugin to use _settings_ file is used</br>
+Order plugins should implement method _get_order_ that returns list of files in some custom order.</br>
 Existing plugins:
 * _size_order_ - sorts files by size ascending
 
