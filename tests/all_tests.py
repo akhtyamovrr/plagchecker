@@ -7,8 +7,9 @@ import unittest
 suite = unittest.TestLoader().loadTestsFromNames(
     [
         'test_plugin_load',
+        'readers.read_order.test_size_order'
     ]
 )
 
-testresult = unittest.TextTestRunner(verbosity=1).run(suite)
-sys.exit(0 if testresult.wasSuccessful() else 1)
+test_result = unittest.TextTestRunner(verbosity=1).run(suite)
+sys.exit(0 if test_result.wasSuccessful() else 1)
