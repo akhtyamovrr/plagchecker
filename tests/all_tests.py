@@ -1,8 +1,8 @@
 import sys
+import unittest
 
 sys.path[0:0] = ['.', '..']
 
-import unittest
 
 suite = unittest.TestLoader().loadTestsFromNames(
     [
