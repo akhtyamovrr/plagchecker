@@ -2,6 +2,7 @@ import sys
 from unittest import TestCase
 
 sys.path[0:0] = ['.', '..\..\..']
+
 from src.readers.read_order import size_order
 
 
