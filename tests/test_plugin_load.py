@@ -1,7 +1,7 @@
 import sys
 from unittest import TestCase
 
-sys.path[0:0] = ['.', '..']
+#sys.path[0:0] = ['.', '..']
 from src import plugin_loader
 
 __author__ = 'ARR'
