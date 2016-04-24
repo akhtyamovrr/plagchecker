@@ -13,6 +13,11 @@ To configure a plugin to use _settings_ file is used</br>
 Order plugins should implement method _get_order_ that returns list of files in some custom order.</br>
 Existing plugins:
 * _size_order_ - sorts files by size ascending
+###Readers
+Used to read code from all sources that should be compared.</br>
+To configure a plugin to use _settings_ file is used</br>
+Existing plugins:
+* _reader_ - read all sources from chosen directory with set extension and strips \n from the head and tail of string
 
 ##Testing
 *unittest* is used for testing. An example of new tests creation may be taken from existing ones.</br>
