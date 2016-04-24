@@ -1,7 +1,7 @@
 from unittest import TestCase
 import sys
 
-sys.path[0:0] = ['.', '..\..\..']
+sys.path[0:0] = ['.', '..\..']
 from src.readers import reader
 
 src_dir = 'tests/readers/read_order/sources'
