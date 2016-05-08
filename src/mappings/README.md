@@ -14,4 +14,4 @@ _$_: rarely used keywords</br>
 _ret_: return and void</br>
 _sz_: sizeof</br>
 _stat_: static</br>
-___: for new keywords of C11</br>
+_: for new keywords of C11</br>
