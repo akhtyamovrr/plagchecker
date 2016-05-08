@@ -8,7 +8,8 @@ suite = unittest.TestLoader().loadTestsFromNames(
     [
         'test_plugin_load',  # tests dynamic loading of plugins
         'readers.read_order.test_size_order',  # sort of files by size
-        'readers.test_reader'  # reading of some directory recursively, concatenates code with '*.c' extension
+        'readers.test_reader',  # reading of some directory recursively, concatenates code with '*.c' extension
+        'tokenizers.test_tokenizer',  # conversion of source code to tokens string
     ]
 )
 
