@@ -1,0 +1,4 @@
+{
+  "preprocessing":"src/preprocessing/c_preprocessing",
+  "custom_tokenizer":"src/tokenizers/c_tokenizer"
+}

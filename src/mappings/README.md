@@ -1,7 +1,9 @@
 #Mappings
 Mappings are used for tokenization of program sources. They contain replacements for all keywords and operators 
 that are interesting for comparison.</br>
-Mapping format (space only between two parts): ```<keyword/operator> <replacement>```
+Json format was chosen for mapping as it may be read to dictionary using standard language tools.
+Mapping format: ```<"keyword/operator">:<"replacement">```
+Pairs are separated by ",".
 ##c_mapping
 _-_: words that can change execution order</br>
 _C_: conditions</br>
