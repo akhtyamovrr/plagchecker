@@ -1,12 +1,13 @@
-from src import plugin_loader
 import fnmatch
 import os
 
 
-def read_code(directory, extension):
+def read_code(directory, extension, order):
     """
     :param directory: root directory of the project that will be searched recursively to find all sources
     :param extension: extension of source files
+    :param order: defines the order of sources concatenation, should implement get_order(source).
+    If None or wrong argument, AttributeError is thrown
     :return: all source code like a string
     """
     files_names = find_files(directory, extension)
@@ -14,7 +15,6 @@ def read_code(directory, extension):
     for file_name in files_names:
         files.append(open(file_name, 'r'))
     try:
-        order = plugin_loader.load_by_name('src/readers/read_order/size_order')
         sorted_sources = order.get_order(files)
         code_string = ''
         for source in sorted_sources:

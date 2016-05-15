@@ -1,4 +1,5 @@
 {
   "preprocessing":"src/preprocessing/c_preprocessing",
-  "custom_tokenizer":"src/tokenizers/c_tokenizer"
+  "custom_tokenizer":"src/tokenizers/c_tokenizer",
+  "read_order":"src/readers/read_order/size_order"
 }
