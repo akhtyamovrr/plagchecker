@@ -1,0 +1,6 @@
+{
+  "writers": [
+    "#tests/plugin/writer1",
+    "tests/plugin/writer2"
+  ]
+}
