@@ -12,7 +12,8 @@ The following functionality is needed to execute whole process:
 * Attribute methods implementation for filtering of sources that are not plagiarism for sure.
 * Preprocessors - changes of source code for further tokenization to remove unnecessary parts. 
 * Tokenizers of source code for methods that work with tokenized representation of program.
-* Mappings for tokenization. <br>
+* Mappings for tokenization.
+
 All these functions are implemented by plugins.
 There is detailed information about formats and requirements for each type of plugins in directories that contain 
 implementations of these functions. To get information how to implement custom scripts, read 'README.md' of 
