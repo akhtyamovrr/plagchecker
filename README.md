@@ -12,11 +12,12 @@ The following functionality is needed to execute whole process:
 * Attribute methods implementation for filtering of sources that are not plagiarism for sure.
 * Preprocessors - changes of source code for further tokenization to remove unnecessary parts. 
 * Tokenizers of source code for methods that work with tokenized representation of program.
-* Mappings for tokenization.
+* Mappings for tokenization. <br>
 All these functions are implemented by plugins.
 There is detailed information about formats and requirements for each type of plugins in directories that contain 
 implementations of these functions. To get information how to implement custom scripts, read 'README.md' of 
 needed directory.
+
 ##Testing
 *unittest* is used for testing. An example of new tests creation may be taken from existing ones.</br>
 If tests are created any other way, there is no guarantee that they will be executed by CI.</br>
@@ -32,7 +33,10 @@ suite = unittest.TestLoader().loadTestsFromNames(
     [
         'test_plugin_load',  # tests dynamic loading of plugins
         'readers.read_order.test_size_order',  # sort of files by size
-        'readers.test_reader'  # reading of some directory recursively, concatenates code with '*.c' extension
+        'readers.test_reader',  # reading of some directory recursively, concatenates code with '*.c' extension
+        'tokenizers.test_tokenizer',  # conversion of source code to tokens string
+        'tokenizers.test_c_tokenizer',  # custom logic for conversion of C language
+        'preprocessors.test_c_preprocessing',  # sources modifications for further tokenization
     ]
 )
 ```
