@@ -31,7 +31,7 @@ def load_tools():
         data = json.load(data_file)
     try:
         custom_tokenizer_name = data['custom_tokenizer']
-        preprocessor_name = data['preprocessing']
+        preprocessor_name = data['preprocessor']
     except KeyError:
         return None
     return plugin_loader.load_by_name(preprocessor_name), plugin_loader.load_by_name(custom_tokenizer_name)

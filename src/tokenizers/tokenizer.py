@@ -8,11 +8,11 @@ def convert(mapping, source_string, preprocessor=None, custom_tokenizer=None):
     :param mapping: dictionary of operator replacements
     :param source_string: string of program for conversion
     :param preprocessor: makes string modifications before tokenization. If None, this step is skipped.
-    If does not implement preprocess(source_string), throws AttributeError
     :param custom_tokenizer: modifications of code by some language specific logic. If code may be modified by custom
-    tokenizer, this modification is used instead of mapping. If None, this step is skipped.
-    If does not implement convert(source_token), throws AttributeError
+    tokenizer, this modification is used instead of mapping. If custom_tokenizer is None, this step is skipped.
     :return: tokenized representation of source program
+    :raise: AttributeError if preprocessor does not implement preprocess(source_string)
+    or custom_tokenizer does not implement convert(source_token)
     """
     if preprocessor is not None:
         split_source = preprocessor.preprocess(source_string).split()
@@ -36,7 +36,7 @@ def load_tools():
         data = json.load(data_file)
     try:
         custom_tokenizer_name = data['custom_tokenizer']
-        preprocessor_name = data['preprocessing']
+        preprocessor_name = data['preprocessors']
     except KeyError:
         return None
     return plugin_loader.load_by_name(preprocessor_name), plugin_loader.load_by_name(custom_tokenizer_name)

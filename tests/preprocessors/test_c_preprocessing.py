@@ -1,5 +1,5 @@
 from unittest import TestCase
-from src.preprocessing import c_preprocessing
+from src.preprocessors import c_preprocessing
 
 
 class TestCPreprocessing(TestCase):
