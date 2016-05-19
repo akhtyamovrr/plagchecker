@@ -13,6 +13,7 @@ suite = unittest.TestLoader().loadTestsFromNames(
         'tokenizers.test_c_tokenizer',  # custom logic for conversion of C language
         'preprocessors.test_c_preprocessing',  # sources modifications for further tokenization
         'attribute_methods.test_count_functions',  # counts amount of declared and implemented functions
+        'attribute_methods.test_count_loops',  # counts amount of loops in program
     ]
 )
 
