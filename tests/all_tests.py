@@ -15,6 +15,8 @@ suite = unittest.TestLoader().loadTestsFromNames(
         'attribute_methods.test_count_functions',  # counts amount of declared and implemented functions
         'attribute_methods.test_count_loops',  # counts amount of loops in program
         'attribute_methods.test_attribute_runner',  # tests running of attribute methods from the list
+        'tokens_comparison.test_lcs',  # testing of least common string algorithm
+        'tokens_comparison.test_comparison_runner',  # testing of least common string search algorithm
     ]
 )
 
