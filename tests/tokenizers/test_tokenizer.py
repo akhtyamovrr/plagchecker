@@ -15,14 +15,14 @@ class TestTokenizer(TestCase):
         preprocessor, custom_tokenizer = load_tools()
         source = 'int* ptr'
         mapping = {'while': 'L'}
-        actual = tokenizer.convert(mapping, source, preprocessor, custom_tokenizer)
+        actual = tokenizer.convert(mapping, source, custom_tokenizer, preprocessor)
         self.assertEquals("P", actual)
 
     def test_complex_tokenization(self):
         preprocessor, custom_tokenizer = load_tools()
         source = 'double* ptr\n for (i; i < 5; i++ {)'
         mapping = {'for': 'L'}
-        actual = tokenizer.convert(mapping, source, preprocessor, custom_tokenizer)
+        actual = tokenizer.convert(mapping, source, custom_tokenizer, preprocessor)
         self.assertEquals("PL", actual)
 
 
