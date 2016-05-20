@@ -13,6 +13,7 @@ suite = unittest.TestLoader().loadTestsFromNames(
         'tokenizers.test_c_tokenizer',  # custom logic for conversion of C language
         'preprocessors.test_c_preprocessing',  # sources modifications for further tokenization
         'tokens_comparison.test_lcs',  # testing of least common string algorithm
+        'tokens_comparison.test_comparison_runner',  # testing of least common string algorithm
     ]
 )
 
