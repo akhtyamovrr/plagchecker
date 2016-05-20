@@ -15,7 +15,6 @@ def compare(comparators, source_token, tokens, max_allowed=0):
     for comparator in comparators:
         for key in tokens.keys():
             result = len(comparator.compare(source_token, tokens[key])) / len(source_token)
-            print('result', result)
             if result > max_allowed and (key not in results_map or results_map[key] < result):
                 results_map[key] = result
     return results_map
