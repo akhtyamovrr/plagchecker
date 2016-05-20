@@ -2,7 +2,7 @@
 Tokenizers are user to convert source code to tokenized representation.</br>
 ##tokenizer
 This unit contains basic logic for code tokenization. It implements 
-```convert(mapping, source_string, preprocessor=None, custom_tokenizer=None)```
+```convert(mapping, source_string, custom_tokenizer=None, preprocessor=None)```
 The main function of this unit is to replace parts of source string with values from mapping. Mapping has operators and 
 keywords of some language as keys and their replacements as values.</br>
 Preprocessor removes parts of code that are not needed for tokenization and may affect results.</br> 
