@@ -1,4 +1,14 @@
 def compare(comparators, source_token, tokens, max_allowed=0):
+    """
+    Runs token comparators on tokenized programs
+    :param comparators: list of comparators to run
+    :param source_token: source that should be compared to all others
+    :param tokens: tokens to be compared with
+    :param max_allowed: max degree of similarity not to be a plagiarism. 0 by default
+    :return: list of programs and degrees of similarity with source more than max_allowed
+    :raises: AttributeError if comparator does not implement compare(x, y)
+    """
+
     if none_or_empty_list([comparators, source_token, tokens]):
         return None
     results_map = {}

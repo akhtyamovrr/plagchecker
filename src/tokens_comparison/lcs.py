@@ -1,4 +1,10 @@
 def compare(x, y):
+    """
+    Compares two string and returns longest common string
+    :param x: string
+    :param y: string
+    :return: list of common characters
+    """
     if len(x) == 0 or len(y) == 0:
         return []
     if x[-1] == y[-1]:
