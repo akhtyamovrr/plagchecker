@@ -5,9 +5,8 @@ Now it is being developed for C language, it should work with single-file and mu
 The main idea is to make a configurable tool to be able to change/add metrics and different languages support in the future without changes in existing code. That is why this application is based on plug-ins for reading, tokenization, estimation.
 
 ##Plugins
-As it was mentioned before, the application should use plugins to be flexible. There is an information about plugins plugins and ways of using them
-</br>
-The following functionality is needed to execute whole process:
+As it was mentioned before, the application should be implemented using plugins to make it flexible.</br>
+The following functions need to be executed for whole process:
 * Readers of all sources in some established order
 * Attribute methods implementation for filtering of sources that are not plagiarism for sure.
 * Preprocessors - changes of source code for further tokenization to remove unnecessary parts. 
@@ -16,7 +15,7 @@ The following functionality is needed to execute whole process:
 
 All these functions are implemented by plugins.
 There is detailed information about formats and requirements for each type of plugins in directories that contain 
-implementations of these functions. To get information how to implement custom scripts, read 'README.md' of 
+implementations of these functions in _src_. To get information how to implement custom scripts, read _README.md_ of 
 needed directory.
 
 ##Testing
