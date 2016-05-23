@@ -1,4 +1,4 @@
-def compare(metrics, new_source, sources_metric_values, max_allowed):
+def compare(metrics, new_source, sources_metric_values, max_allowed=0):
     """
     Runs metric modules on new source and compares with existing ones
     :param metrics: list of metric modules. They should implement count(source_string) and return integer value
