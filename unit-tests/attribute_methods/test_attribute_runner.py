@@ -3,7 +3,7 @@ from src import plugin_loader
 from unittest import TestCase
 from src.attribute_methods import attribute_runner
 
-root_directory = 'tests/attribute_methods/sources/'
+root_directory = 'unit-tests/attribute_methods/sources/'
 
 
 class TestAttributeRunner(TestCase):

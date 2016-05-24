@@ -1,7 +1,0 @@
-{
-  "writers": [
-    "tests/plugin/writer1",
-    "tests/plugin/writer3",
-    "tests/plugin/writer2"
-  ]
-}

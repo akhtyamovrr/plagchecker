@@ -3,7 +3,7 @@ from src.readers import reader
 from src import plugin_loader
 from src.readers.read_order import size_order
 
-src_dir = 'tests/readers/read_order/sources'
+src_dir = 'unit-tests/readers/read_order/sources'
 
 
 class TestReadFiles(TestCase):

@@ -1,0 +1,7 @@
+{
+  "writers": [
+    "unit-tests/plugin/writer1",
+    "unit-tests/plugin/writer3",
+    "unit-tests/plugin/writer2"
+  ]
+}
