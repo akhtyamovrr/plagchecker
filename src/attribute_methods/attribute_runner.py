@@ -6,6 +6,7 @@ def compare(metrics, new_source, sources_metric_values, max_allowed):
     :param sources_metric_values: existing sources metrics
     :param max_allowed: max allowed similarity of result metrics to be not plagiarism for attributes check
     :return: list of sources that may be plagiarism and should be checked by more reliable algorithm
+    :raises AttributeError if some metrics do not implement method count(source_code)
     """
     metrics_count = 0
     for metric in metrics:

@@ -3,6 +3,10 @@ from src.preprocessors import c_preprocessing
 
 
 class TestCPreprocessing(TestCase):
+    def test_not_string(self):
+        with self.assertRaises(TypeError):
+            c_preprocessing.preprocess(1)
+
     def test_spaces(self):
         source_string = 'while   do for'
         result = c_preprocessing.preprocess(source_string)
