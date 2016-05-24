@@ -2,20 +2,28 @@ import fnmatch
 import os
 
 
-def read_code(directory, extension, order):
+def read_code(directory, extensions, order):
     """
     :param directory: root directory of the project that will be searched recursively to find all sources
-    :param extension: extension of source files
+    :param extensions: list of extensions of source files
     :param order: defines the order of sources concatenation, should implement get_order(source).
     If None or wrong argument, AttributeError is thrown
     :return: all source code like a string
+    :raises: AttributeError if directory or extensions are None
+    :raises: IOError if directory does not exist
     """
-    files_names = find_files(directory, extension)
+    if directory is None or extensions is None:
+        raise AttributeError
+    files_names = []
+    for extension in extensions:
+        files_names.extend(find_files(directory, extension))
+    if len(files_names) == 0:
+        raise IOError
     files = []
     for file_name in files_names:
         files.append(open(file_name, 'r'))
     try:
-        sorted_sources = order.get_order(files)
+        sorted_sources = files if order is None else order.get_order(files)
         code_string = ''
         for source in sorted_sources:
             source.seek(0)  # need to read from the beginning if any other operations have been done in read_order unit
