@@ -27,7 +27,7 @@ class TestTokenizer(TestCase):
 
 
 def load_tools():
-    with open('settings.json') as data_file:
+    with open('unit-tests/tokenizers/test_config.json') as data_file:
         data = json.load(data_file)
     try:
         custom_tokenizer_name = data['custom_tokenizer']

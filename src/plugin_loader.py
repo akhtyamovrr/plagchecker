@@ -19,13 +19,13 @@ def load(modules_paths):
     return modules
 
 
-def load_by_name(filename):
+def load_by_name(module_path):
     """
     Loading unit by file name
-    :param filename: name of unit to load
+    :param module_path: name of unit to load
     :return: loaded module
     """
-    name = filename.rstrip('\n')
+    name = module_path.rstrip('\n')
     fp = None
     try:
         fp, pathname, description = imp.find_module(name)
