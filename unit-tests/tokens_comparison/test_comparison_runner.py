@@ -21,7 +21,7 @@ class TestComparisonRunner(TestCase):
         string = 'parent'
         with_trash = 'parliament'
         result = token_comparison_runner.compare([lcs], string, {'trashed': with_trash})
-        self.assertEquals(1, result['trashed'])
+        self.assertEquals(0.6, result['trashed'])
         result = token_comparison_runner.compare([lcs], with_trash, {'trashed': string})
         self.assertEquals(0.6, result['trashed'])
 

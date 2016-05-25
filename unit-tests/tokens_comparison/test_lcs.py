@@ -5,7 +5,7 @@ from src.tokens_comparison import lcs
 class TestLCS(TestCase):
     def test_equal(self):
         string = 'rain is good for brain'
-        result = lcs.compare(string, string)
+        result = lcs.recursive(string, string)
         expected = []
         expected[:0] = string
         self.assertEquals(expected, result)
@@ -13,7 +13,7 @@ class TestLCS(TestCase):
     def test_substring(self):
         string = 'parent'
         substring = 'rent'
-        result = lcs.compare(string, substring)
+        result = lcs.recursive(string, substring)
         expected = ['r', 'e', 'n', 't']
         self.assertEquals(expected, result)
 
@@ -22,11 +22,5 @@ class TestLCS(TestCase):
         shorter_string = 'parent'
         expected = []
         expected[:0] = shorter_string
-        result = lcs.compare(string, shorter_string)
+        result = lcs.recursive(string, shorter_string)
         self.assertEquals(expected, result)
-
-    # def test_with_move(self):
-    #     string = 'friend'
-    #     moved_string = 'frndie'
-    #     result = lcs.compare(string, moved_string)
-    #     print(result)
