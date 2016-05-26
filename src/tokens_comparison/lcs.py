@@ -7,7 +7,7 @@ def compare(x, y):
 
 def recursive(x, y):
     """
-    Compares two string and returns longest common string
+    Compares two string and returns longest common substring
     :param x: string
     :param y: string
     :return: list of common characters
