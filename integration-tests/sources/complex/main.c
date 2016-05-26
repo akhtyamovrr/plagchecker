@@ -1,11 +1,11 @@
 #include "stdio.h"
 
 /*
-Определение простоты целого числа
+Simple or complex number
 */
 int main(void) {
 	int number = 10;
-	int divs = 0; // количество делителей
+	int divs = 0; // nubmer of deviders
 	int i = 0;
     for (i = 1; i < number; i++)
     {
