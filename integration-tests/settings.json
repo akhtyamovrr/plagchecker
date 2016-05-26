@@ -9,5 +9,5 @@
   "tokens_comparison": [
     "src/tokens_comparison/lcs"
   ],
-  "mapping":"src/mappings/c_mapping"
+  "mapping":"src/mappings/c_mapping.json"
 }

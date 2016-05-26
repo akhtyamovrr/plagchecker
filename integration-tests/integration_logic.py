@@ -2,6 +2,7 @@ import json
 from src.readers import reader
 from src import plugin_loader
 from src.attribute_methods import attribute_runner
+from src.tokenizers import tokenizer
 
 integration_sources = 'integration-tests/sources/'
 settings_path = 'integration-tests/settings.json'
@@ -21,3 +22,10 @@ def attribute_check():
     preprocessed = read_and_preprocess()
     attribute_checker = plugin_loader.load(settings['attribute_metrics'])
     return attribute_runner.compare(attribute_checker, preprocessed, [])
+
+
+def tokenization():
+    preprocessed = read_and_preprocess()
+    with open(settings['mapping']) as mapping_file:
+        mapping = json.load(mapping_file)
+    return tokenizer.convert(mapping, preprocessed)
