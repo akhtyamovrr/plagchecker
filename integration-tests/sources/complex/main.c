@@ -1,8 +1,11 @@
 #include "stdio.h"
 
+/*
+Определение простоты целого числа
+*/
 int main(void) {
 	int number = 10;
-	int divs = 0;
+	int divs = 0; // количество делителей
 	int i = 0;
     for (i = 1; i < number; i++)
     {
