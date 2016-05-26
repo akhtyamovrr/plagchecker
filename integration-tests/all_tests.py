@@ -7,8 +7,8 @@ sys.path[0:0] = ['.', '..']
 suite = unittest.TestLoader().loadTestsFromNames(
     [
         'read_and_preprocess',
-        'attribute_check_added',
-        'tokenization_added',
+        'attribute_check',
+        'tokenization',
         'tokens_comparison'
     ]
 )
