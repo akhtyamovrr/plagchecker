@@ -1,0 +1,6 @@
+{
+  "attribute_methods": [
+    "src/attribute_methods/count_functions",
+    "src/attribute_methods/count_loops"
+  ]
+}
