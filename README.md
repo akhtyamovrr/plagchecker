@@ -23,20 +23,9 @@ needed directory.
 If tests are created any other way, there is no guarantee that they will be executed by CI.</br>
 To run all tests locally run the following script from the project root: 
 ```python
-python tests/all_tests.py
+python unit-tests/all_tests.py
 ```
 </br>
-To add test for execution with other existing tests and to run it on CI, set path to the the script from _tests_ folder to _all_tests.py_ suite.</br>
-###Existing tests:
-```python
-suite = unittest.TestLoader().loadTestsFromNames(
-    [
-        'test_plugin_load',  # tests dynamic loading of plugins
-        'readers.read_order.test_size_order',  # sort of files by size
-        'readers.test_reader',  # reading of some directory recursively, concatenates code with '*.c' extension
-        'tokenizers.test_tokenizer',  # conversion of source code to tokens string
-        'tokenizers.test_c_tokenizer',  # custom logic for conversion of C language
-        'preprocessors.test_c_preprocessing',  # sources modifications for further tokenization
-    ]
-)
+The same way is used to execute integration tests. To run integration tests use ```python integration-tests/all_tests.py```</br>
+To add test for execution with other existing tests and to run it on CI, set path to the the script from _unit-tests_ or _integration-tests_ folders to _all_tests.py_ suite.</br>
 ```
