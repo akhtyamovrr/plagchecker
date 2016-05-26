@@ -9,6 +9,7 @@ suite = unittest.TestLoader().loadTestsFromNames(
         'read_and_preprocess',
         'attribute_check_added',
         'tokenization_added',
+        'tokens_comparison'
     ]
 )
 

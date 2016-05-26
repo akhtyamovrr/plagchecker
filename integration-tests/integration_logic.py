@@ -3,6 +3,7 @@ from src.readers import reader
 from src import plugin_loader
 from src.attribute_methods import attribute_runner
 from src.tokenizers import tokenizer
+from src.tokens_comparison import token_comparison_runner
 
 integration_sources = 'integration-tests/sources/'
 settings_path = 'integration-tests/settings.json'
@@ -29,3 +30,10 @@ def tokenization():
     with open(settings['mapping']) as mapping_file:
         mapping = json.load(mapping_file)
     return tokenizer.convert(mapping, preprocessed)
+
+
+def tokens_comparison():
+    token_string = tokenization()
+    comparator = plugin_loader.load(settings['tokens_comparison'])
+    return token_comparison_runner.compare([comparator], token_string, [])
+
