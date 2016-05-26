@@ -8,6 +8,8 @@ def compare(metrics, new_source, sources_metric_values, max_allowed=0):
     :return: list of sources that may be plagiarism and should be checked by more reliable algorithm
     :raises AttributeError if some metrics do not implement method count(source_code)
     """
+    if len(sources_metric_values) == 0:
+        return []
     metrics_count = 0
     for metric in metrics:
         metrics_count += metric.count(new_source)

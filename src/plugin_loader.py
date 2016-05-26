@@ -3,7 +3,7 @@ import imp
 
 def load(modules_paths):
     """
-    Loading units from settings file
+    Loading units from paths list
     :param modules_paths: list of modules to load. If path starts with "#" character, it is commented and not loaded.
     :return: list of loaded plugins. If configuration file was empty or had nonexistent plugins, returns empty list.
     If some plugins do not exist, they are ignored
