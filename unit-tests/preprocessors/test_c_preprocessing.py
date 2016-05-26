@@ -30,7 +30,7 @@ class TestCPreprocessing(TestCase):
     def test_braces(self):
         source_string = 'while (1) {int c = 0}; if'
         result = c_preprocessing.preprocess(source_string)
-        self.assertEquals('while (1) int c = 0 if', result)
+        self.assertEquals('while 1 int c = 0 if', result)
 
     def test_line_comment(self):
         source_string = 'int a = 0; // nothing interesting here \n double b = 3.4;'
