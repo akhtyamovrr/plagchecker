@@ -27,8 +27,8 @@
   "register":"$",
   "volatile":"$",
   "restrict":"$",
-  "return":"ret",
-  "void":"ret",
+  "return":"R",
+  "void":"R",
   "sizeof":"sz",
   "static":"stat",
   "_Alignas":"_",
@@ -40,5 +40,7 @@
   "_Imaginary":"_",
   "_Noreturn":"_",
   "_Static_assert":"_",
-  "_Thread_local":"_"
+  "_Thread_local":"_",
+  "#define":"D",
+  "#include":"#"
 }
