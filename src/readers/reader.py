@@ -21,7 +21,7 @@ def read_code(directory, extensions, order):
         raise IOError
     files = []
     for file_name in files_names:
-        files.append(open(file_name, 'r'))
+        files.append(open(file_name, 'r', encoding='utf-8'))
     try:
         sorted_sources = files if order is None else order.get_order(files)
         code_string = ''

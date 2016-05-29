@@ -17,6 +17,8 @@ suite = unittest.TestLoader().loadTestsFromNames(
         'attribute_methods.test_attribute_runner',  # unit-tests running of attribute methods from the list
         'tokens_comparison.test_lcs',  # testing of least common string algorithm
         'tokens_comparison.test_comparison_runner',  # testing of longest common string search recursive algorithm
+        'tokens_comparison.test_lcs_iter',  # testing of longest common algorithm with iterative implementation
+        'tokens_comparison.test_levenshtein',  # testing of levenshtein distance
     ]
 )
 
