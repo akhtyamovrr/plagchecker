@@ -8,7 +8,10 @@ from executors import executor
 def main(argv=None):
     if argv is None:
         argv = sys.argv
-    print('Similarity:', executor.execute(argv[1]))
+    try:
+        print('Similarity:', executor.execute(argv[1]))
+    except IOError:
+        print('Wrong path to source directory')
 
 
 if __name__ == "__main__":

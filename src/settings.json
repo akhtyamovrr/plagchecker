@@ -5,7 +5,7 @@
   "attribute_metrics": [
   ],
   "tokens_comparison": [
-    "src/tokens_comparison/tanimoto",
+    "src/tokens_comparison/jaccard",
     "#src/tokens_comparison/lcs_iter",
     "#src/tokens_comparison/levenshtein"
   ],
