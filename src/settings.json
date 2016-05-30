@@ -5,9 +5,11 @@
   "attribute_metrics": [
   ],
   "tokens_comparison": [
-    "src/tokens_comparison/jaccard",
+    "#src/tokens_comparison/jaccard",
     "#src/tokens_comparison/lcs_iter",
-    "#src/tokens_comparison/levenshtein"
+    "src/tokens_comparison/levenshtein"
   ],
-  "mapping":"src/mappings/c_mapping.json"
+  "mapping":"src/mappings/c_mapping.json",
+  "attr_allowed":"0.4",
+  "tokens_allowed":"0.4"
 }

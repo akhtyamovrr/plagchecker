@@ -9,9 +9,9 @@ def convert(source_token):
     """
     array_regex = '\w+\[\d*\]'
     pointer_regex = '\w+\*'
-    match = re.search(array_regex, source_token)
-    if match:
-        return 'A'
+    # match = re.search(array_regex, source_token)
+    # if match:
+    #     return 'A'
     match = re.search(pointer_regex, source_token)
     if match:
         return 'P'
