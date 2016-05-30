@@ -15,8 +15,11 @@ def main(argv=None):
     except AttributeError as e:
         print("Check for values of plugins at src/settings.json\n", e)
     print('Similarity:')
-    for key in similarity.keys():
-        print(key, similarity[key])
+    if similarity is None:
+        pring('no')
+    else:
+        for key in similarity.keys():
+            print(key, similarity[key])
 
 
 if __name__ == "__main__":
