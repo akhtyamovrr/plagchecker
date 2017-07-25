@@ -28,6 +28,9 @@ To run all tests locally run the following script from the project root:
 python unit-tests/all_tests.py
 ```
 </br>
-The same way is used to execute integration tests. To run integration tests use ```python integration-tests/all_tests.py```
+The same way is used to execute integration tests. To run integration tests use 
+```python 
+python integration-tests/all_tests.py
+```
 </br>
 To add test for execution with other existing tests and to run it on CI, set path to the the script from _unit-tests_ or _integration-tests_ folders to _all_tests.py_ suite.</br>
