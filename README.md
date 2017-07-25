@@ -29,7 +29,7 @@ python unit-tests/all_tests.py
 ```
 </br>
 The same way is used to execute integration tests. To run integration tests use 
-```python 
+```python
 python integration-tests/all_tests.py
 ```
 </br>
